@@ -7,4 +7,5 @@ echo "hi";
 $mysql->close();
 // friend, bestfriend, partner, subscriber, following
 // систему приглашений и сверстай страницу
+// test
 ?>
