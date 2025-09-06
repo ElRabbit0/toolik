@@ -1,0 +1,176 @@
+body{
+    font-family: Varela, Arial;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    flex-direction: column;
+}
+
+.main-header{
+    color: white;
+    margin-top: -20vh;
+    font-size: 100px;
+    margin-bottom: 1vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contain{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 1vw;
+    width: 30%;
+    border-radius: 1vw;
+}
+
+.contain h2{
+    display:block;
+    text-align: center;
+    font-size: xx-large;
+}
+.contain .input-box{
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    justify-self: center;
+    width: 80%;
+    opacity: 0.8;
+}
+.contain .input-box:hover{
+    opacity: 1;
+}
+.contain input{
+    height: 3vh;
+    padding: 10px;
+    border-radius: 11px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.377);
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    font-size: 16px;
+}
+.contain input::placeholder{
+    color: rgba(0, 0, 0, 0.377);
+}
+
+.contain input:focus{
+    outline-color: black;
+    transition: outline-color 0.5s;
+}
+.input-box label {
+    position: absolute;
+    white-space:nowrap;
+    z-index: 1;
+    font-size: 16px;
+    color: black;
+    bottom:1.4em;
+    left:.8em ;
+    pointer-events:none;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transition: all .2s;
+    background-color: white;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: green;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.input-box input:not(:placeholder-shown)+label,
+.input-wrapper input:focus+label{
+    font-size:90%;
+    bottom: 90%;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.func-button{
+    height: 3vh;
+    width: 80%;
+    border-radius: 11px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    margin: 20px 0;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    font-size: 16px;
+}
+.func-button:hover{
+    opacity: 1;
+}
+.func-button:active{
+    transform: scale(0.99);
+}
+.label-click{
+    display: block;
+}
+.label-click .js-button{
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    cursor: pointer;
+    color: red;
+    padding: 0;
+
+}
+.label-click .js-button:hover{
+    text-decoration: underline;
+}
+
+.info{
+    width: calc(80% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    text-align: start;
+    justify-self: center;
+    word-break: break-all;
+    text-decoration: underline;
+}
+.info p{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.error{
+    color: red;
+}
+#message{
+    color: green;
+}
+
+
+@media(max-width: 768px){
+    .contain{
+        padding: 2vw;
+        width: 70vw;
+        border-radius: 2vw;
+    }
+    .contain h2{
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+    .func-button{
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        height: 6vh;
+    }
+    .main-header{
+        margin-top: -6vh;
+        margin-bottom: 1vh;
+        font-size: 80px;
+    }
+    .input-box label{
+        bottom: 0.9em;
+    }
+}

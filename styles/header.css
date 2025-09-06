@@ -1,0 +1,197 @@
+body{
+    background-color: rgb(160, 160, 160);
+    font-family: Varela, arial;
+}
+
+#real-header{
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    grid-template-columns: 10vw 70vw 20vw;
+    background-color: black;
+    color: white;
+    padding-right: 2px;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 4px;
+    z-index: 100;
+}
+
+#header-logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+}
+#header-logo:hover{
+    cursor: pointer;
+    user-select:none;
+}
+
+#header-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-button{
+    width: 25%;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.menu-button:hover{
+    filter:invert();
+}
+
+.menu-button-selected{
+    background-color: white;
+    color: black;
+}
+.menu-button-selected:hover{
+    filter:hue-rotate(90deg);
+}
+
+#header-account{
+    padding: 4px 0;
+    padding-right: 8px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    user-select:none;
+    cursor: pointer;
+}
+
+#account-name{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10%;
+    padding-top: 8px;
+}
+#account-name p{
+   margin: 0;
+}
+#nickname{
+    font-size: 120%;
+}
+#login{
+    font-size: 80%;
+    text-decoration: underline;
+    height: 50%;
+}
+#not-nickname{
+    font-size: 120%;
+    justify-self: center;
+}
+
+#account-icon{
+    background-color: white;
+    border-radius: 50%;
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#account-icon img{
+    width: calc(3vh - 2px);
+    height: calc(3vh - 2px);
+    pointer-events: none;
+    border:1px solid white;
+    border-radius: 50%;
+}
+
+#account-icon .user-icon{
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#header-button{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+    #real-header{
+        display: grid;
+        grid-template-areas:
+        "logo account button"
+        "menu menu menu";
+        position: fixed;
+        grid-template-columns: 30vw 64vw 6vw;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: black;
+        color: white;
+        padding-top: 2px;
+        padding-right: 2px;
+        border-color: black;
+        border-style: solid;
+        border-width: 0px;
+        border-bottom-width: 4px;
+        z-index: 100;
+    }
+    #header-logo{
+        grid-area: logo;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 200%;
+        padding-left: 8px;
+    }
+    #header-account{
+        grid-area: account;
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    #account-name{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        padding-right: 16px;
+    }
+    #header-button{
+        display: block;
+        grid-area: button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 200%;
+    }
+    #header-menu{
+        display: block;
+        grid-area: menu;
+        border-top-color: rgb(160, 160, 160);
+        border-top-style: solid;
+        border-top-width: 4px;
+    }
+    .menu-button{
+        width: 100%;
+        height: 3vh;
+    }
+    #account-icon{
+        background-color: white;
+        border-radius: 50%;
+        width: 4vh;
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #account-icon img{
+        width: 3vh;
+        height: 3vh;
+    }
+}

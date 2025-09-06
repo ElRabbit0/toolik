@@ -1,0 +1,567 @@
+#page,
+#page-account{
+    margin: 0 10vw;
+    margin-top: 6vh;
+    background-color: white;
+    padding: 10px 20px;
+    padding-bottom: 50px;
+}
+
+#page-account{
+    margin: 0 8vw;
+    margin-top: 4vh;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+    border: none;
+    border-radius: 1vw;
+    min-height: calc(96vh - 130px);
+}
+
+.func-button{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 1vw;
+    padding: 10px;
+    font-family: Varela, arial;
+    cursor: pointer;
+    filter: brightness(0.9);
+    opacity: 0.8;
+    user-select:none;
+}
+.add-button:hover,
+.del-button:hover,
+.func-button:hover{
+    filter: brightness(1);
+    opacity: 1;
+}
+.add-button:active,
+.del-button:active,
+.func-button:active{
+    transform: scale(0.98);
+}
+
+.main-H1{
+    text-align: center;
+}
+
+.sec-form {
+    display: flex;
+    flex-direction: column;
+}
+#js-key{
+    align-self: center;
+    width: 40%; 
+    margin-bottom: 20px;
+}
+.sec-form #hour-form{
+    align-self: center;
+    width: calc(40% - 40px);
+    border: 2px solid black;
+    border-radius: 1vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sec-form input{
+    width: 40%;
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+.sec-form input:hover{
+    filter: brightness(1);
+}
+.sec-form label{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#save-hour{
+    align-self: center;
+    width: auto;
+}
+
+.show{
+    display: grid;
+    grid-template-areas: "h h" "first second";
+    user-select:none;
+}
+.show h2{
+    grid-area: h;
+    text-align: center;
+}
+
+.first,
+.second{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.first h3,
+.second h3{
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+}
+.first{
+    grid-area: first;
+    border-right: 1px solid black;
+}
+.second{
+    grid-area: second;
+    border-left: 1px solid black;
+}
+#error{
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+#message{
+    margin-top: 10px;
+    text-align: center;
+    color: green;
+}
+
+.node{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(90, 90, 90);
+    padding: 10px;
+}
+.node p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.node .hours{
+    display: block;
+    background-color: black;
+    color: white;
+}
+.node .node-header{
+    background-color: rgb(170, 170, 170);
+}
+.node .not{
+    display: block;
+    text-align: center;
+}
+.no{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.add-button,
+.del-button{
+    display: block;
+    background-color: red;
+    border: 1px solid red;
+    font-family: Varela, arial;
+    font-weight: bold;
+    margin-top: 8px;
+    justify-self: center;
+    padding: 4px 8px;
+    cursor: pointer;
+    filter: brightness(0.9);
+    opacity: 0.8;
+}
+
+.add-button{
+    background-color: green;
+    border: 1px solid green;
+}
+
+.all-hours{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(90, 90, 90);
+    padding: 10px;
+    background-color: rgb(90, 90, 90);
+    user-select:text;
+}
+.all-hours p{
+    color: white;
+    margin: 0;
+}
+
+.all-hours .head{
+    font-size: 120%;
+    text-align: center;
+}
+
+
+
+
+
+.back{
+    width: 10vw;
+    height: 4vh;
+    margin-bottom: -4vh;
+}
+.info-acc{
+    display: grid;
+    grid-template-columns: min-content auto auto;
+    margin-bottom: 1vh;
+    background-color: rgb(170, 170, 170);
+    padding: 6px;
+    border-radius: 1vw;
+    border: none;
+}
+.black-button{
+    background-color: black;
+    color: white;
+}
+
+#colhoz{
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+.icon-div{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    border:none;
+    overflow: hidden;
+    height: 140px;
+    width: 140px;
+    background-color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.info-icon img{
+    height: 100px;
+    width: 100px;
+}
+.info-icon .user-icon{
+    height: 138px;
+    width: 138px;
+    object-fit:cover;
+    border-radius: 50%;
+    border:1px solid black;
+}
+#nickname-form,
+#icon-form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+}
+#icon-button{
+    width: min-content;
+    height: min-content;
+    justify-self: center;
+    align-self: center;
+    margin: 0 10px;
+    width: 85px;
+    margin-bottom: 10px;
+}
+#icon-form label{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#input__file{
+    display: none;
+}
+
+
+.info-name{
+    padding-left: 20px;
+    width: 36vw;
+}
+.info-name h1{
+    display: inline;
+    padding-top: 10px;
+}
+
+#nickname{
+    height: 46px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+}
+#name-button{
+    width: 85px;
+    margin-bottom: 10px;
+}
+#nickname::placeholder{
+    color: white;
+    filter: brightness(0.8);
+}
+#nickname-form{
+    width: 80%;
+}
+
+.info-stat p{
+    margin: 0;
+    margin-top: 10px;
+}
+
+.edit-pass{
+    display: flex;
+    flex-direction: column;
+}
+#edit-pass-button{
+    margin-bottom: 20px;
+    width: 40%;
+    align-self: center;
+}
+#password-form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    align-self: center;
+}
+#password-form input{
+    margin-bottom: 10px;
+    height: 24px;
+    border-color: black;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    border-style: solid;
+}
+#password-form input:hover{
+    opacity: 0.8;
+}
+#password-form input:focus{
+    opacity: 1;
+}
+#password-form label{
+    font-weight: bold;
+}
+
+.friend-div{
+    border: 1px solid rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 1vw;
+    border: none;
+}
+.friend-div h1{
+    text-align: center;
+}
+.has{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.friend{
+    border: 1px solid black;
+    margin-bottom: 6px;
+    padding: 6px;
+    background-color: rgb(190, 190, 190);
+}
+.friend h1{
+    width: 100%;
+}
+.info-name h2{
+    margin: 0;
+}
+.account-icon{
+    background-color: white;
+    border-radius: 50%;
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-icon img{
+    width: calc(8vh - 1px);
+    height: calc(8vh - 1px);
+    object-fit: cover;
+    pointer-events: none;
+    border-radius: 50%;
+    border:1px solid black;
+}
+.account-icon .not-icon{
+    width: 6vh;
+    height: 6vh;
+    border-radius: 0;
+    border:none;
+}
+.account-nickname span{
+    font-style: italic;
+}
+.account-nickname .nickname-in{
+    font-size: 200%;
+    font-weight: bold;
+}
+.del-friend{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.more-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+#quit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+#quit-form{
+    align-self: center;
+    width: 60%;
+}
+#quit-button{
+    background-color: red;
+    border-color: red;
+    width: 100%;
+}
+
+
+@media(max-width: 768px){
+    #page,
+    #page-account{
+        margin-top: 8vh;
+        margin: 0;
+    }
+    .func-button{
+        border-radius: 2vw;
+    }
+    .sec-form #hour-form{
+        width: calc(80% - 40px);
+    }
+    .line{
+        display: none;
+    }
+    .node{
+        height: 120px;
+    }
+    .back{
+        width: 40vw;
+        height: 6vh;
+        margin-bottom: -4vh;
+    }
+    #page-account{
+        margin: 0;
+        margin-top: 3vh;
+        padding: 10px 10px;
+        padding-bottom: 30px;
+        border-radius: 2vw;
+        min-height: calc(97vh - 110px);
+    }
+    .info-acc{
+        display: grid;
+        grid-template-columns: min-content auto;
+        grid-template-areas: 
+        "icon name"
+        "date date";
+        margin-bottom: 1vh;
+        background-color: rgb(170, 170, 170);
+        border-radius: 2vw;
+    }
+    #colhoz{
+        display: flex;
+        flex-direction: column;
+        grid-area: icon;
+    }
+    .icon-div{
+        align-self: center;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+    }
+    .info-icon img{
+        height: 120px;
+        width: 120px;
+    }
+
+    #edit-pass-button{
+        width: 60%;
+    }
+
+    .info-name{
+        padding-left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: name;
+        justify-self: center;
+    }
+    .info-name h1{
+        display: block;
+        padding-top: 10px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .info-name h2{
+        font-size: 90%;
+    }
+    .info-stat{
+        padding: 0 10px;
+        margin: 10px 0;
+        grid-area: date;
+    }
+    .info-stat p{
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #quit{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #quit-form{
+        align-self: center;
+        width: 100%;
+    }
+    #quit-button{
+        background-color: red;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    #nickname-form input{
+        width: 100%;
+    }   
+    #password-form{
+        width: calc(100% - 20px);
+        text-align: center;
+    }
+    #password-form input{
+        display: block;
+        justify-self: center;
+    }
+
+    .friend-div{
+        border-radius: 2vw;
+    }
+    .friend-div h1{
+        text-align: center;
+    }
+    .has{
+        grid-template-columns: 20% calc(60% - 20px) 20%;
+        column-gap: 10px;
+    }
+    .info-name h2{
+        margin: 0;
+    }
+    .nickname-in{
+        font-size: 70%;
+    }
+    .date-in span{
+        display: block;
+    }
+}

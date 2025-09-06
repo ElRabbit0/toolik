@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+#information{
+    font-size: x-large;
+}
+#page{
+    min-height: calc(96vh - 130px);
+}
