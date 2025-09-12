@@ -26,9 +26,13 @@
                 ?>
             </div>
         </div>
-        <div class="del-friend">
-            <form action="/pages/logout.php" method="post" id="quit-form">
-                <button class="func-button" type="submit" name="run_script " id="quit-button"
+        <div class="buttons-friend">
+            <form action="/pages/logout.php" method="post" class="add-form">
+                <button class="func-button black-button" type="submit" name="status"
+                    value="<?php $friendId ?>">Статус</button> <!-- Поменять -->
+            </form>
+            <form action="/pages/logout.php" method="post" class="del-form">
+                <button class="func-button del-friend-button" type="submit" name="run_script "
                     value="<?php $friendId ?>">Удалить</button>
             </form>
         </div>
