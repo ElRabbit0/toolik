@@ -3,7 +3,7 @@ session_start();
 require('../node/vars.php');
 $username = $_SESSION['login'];
 $mysql = new mysqli($hostnameSQL, $usernameSQL, $passwordSQL, $databaseSQL);
-$friendList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'partner';");
+$friendList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'partner' LIMIT 3;");
 $friendList = $friendList->fetch_all();
 $number = 3 - count($friendList);
 $additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'bestfriend' LIMIT $number;");
@@ -11,7 +11,7 @@ $additionList = $additionList->fetch_all();
 $friendList = array_merge($friendList, $additionList);
 if (count($friendList) < 3) {
     $number = 3 - count($friendList);
-    $additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` != 'partner' AND `friend_stat` != 'bestfriend' LIMIT $number;");
+    $additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'friend' LIMIT $number;");
     $additionList = $additionList->fetch_all();
     $friendList = array_merge($friendList, $additionList);
 }

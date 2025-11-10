@@ -1,8 +1,6 @@
 <?php
 session_start();
 $_SESSION['page'] = 'Главная';
-?>
-<?php
 require_once('./node/header.php');
 $version = "Beta 1.0";
 ?>

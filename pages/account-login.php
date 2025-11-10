@@ -49,11 +49,13 @@
                     <label for="username">Имя пользователя</label>
                 </div>
                 <div class="input-box">
-                    <input minlength="8" type="password" name="new-password" id="new-password" required placeholder="">
+                    <input minlength="8" type="password" name="new-password" id="new-password" required placeholder=""
+                        autocomplete="new-password">
                     <label for="new-password">Пароль</label>
                 </div>
                 <div class="input-box">
-                    <input minlength="8" type="password" name="ret-password" id="ret-password" required placeholder="">
+                    <input minlength="8" type="password" name="ret-password" id="ret-password" required placeholder=""
+                        autocomplete="new-password">
                     <label for="ret-password">Повторите пароль</label>
                 </div>
                 <div class="info">
