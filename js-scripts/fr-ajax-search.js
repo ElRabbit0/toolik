@@ -18,15 +18,27 @@ $(document).ready(function(){
         });
     });
     $('.del-friend-button').on('click', function(event){
-        console.log(1);
-            clickdel(event.target.value);
-            if(event.target.classList.contains('notcancel-button')){
-                event.target.classList.replace('notcancel-button', 'cancel-button');
-                event.target.innerText = "Отмена";
+            clickdel(event.target.value, event.target.name);
+            if(event.target.name != "subs")
+            {
+                if(event.target.classList.contains('notcancel-button')){
+                    event.target.classList.replace('notcancel-button', 'cancel-button');
+                    event.target.innerText = "Отмена";
+                }
+                else if(event.target.classList.contains('cancel-button')){
+                    event.target.classList.replace('cancel-button', 'notcancel-button');
+                    event.target.innerText = "Удалить";
+                }
             }
-            else if(event.target.classList.contains('cancel-button')){
-                event.target.classList.replace('cancel-button', 'notcancel-button');
-                event.target.innerText = "Добавить";
+            else{
+                if(event.target.classList.contains('notcancel-button')){
+                    event.target.classList.replace('notcancel-button', 'cancel-button');
+                    event.target.innerText = "Отмена";
+                }
+                else if(event.target.classList.contains('cancel-button')){
+                    event.target.classList.replace('cancel-button', 'notcancel-button');
+                    event.target.innerText = "Отклонить";
+                }
             }
         });
 });

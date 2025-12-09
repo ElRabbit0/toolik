@@ -35,8 +35,8 @@ if (count($subList) != 0) {
                                     value='$id'>Добавить</button> 
                             </div>
                             <div class='del-form'>
-                                <button class='func-button del-friend-button notcancel-button' name='del'
-                                    value='$id'>Отклонить</button> 
+                                <button class='func-button del-friend-button notcancel-button'
+                                    value='$id' name='subs'>Отклонить</button> 
                             </div>
                         </div>
                     </div>";

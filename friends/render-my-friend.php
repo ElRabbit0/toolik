@@ -37,7 +37,6 @@ if (count($friendList) != 0) {
             $friendNickname = $mysql->query("SELECT `nickname` FROM `users` WHERE `id` = '$friendIdUsers';");
             $friendNickname = $friendNickname->fetch_assoc();
             $friendNickname = $friendNickname['nickname'];
-
             require('../node/friend-in-list.php');
         }
     }

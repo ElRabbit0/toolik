@@ -28,11 +28,11 @@
     <div class="buttons-friend">
         <form action="/pages/logout.php" method="post" class="add-form">
             <button class="func-button black-button" type="submit" name="status"
-                value="<?php $friendId ?>">Статус</button> <!-- Поменять -->
+                value="<?php echo $friendIdUsers ?>">Статус</button> <!-- Поменять -->
         </form>
-        <form action="/pages/logout.php" method="post" class="del-form">
-            <button class="func-button del-friend-button" type="submit" name="run_script "
-                value="<?php $friendId ?>">Удалить</button>
-        </form>
+        <div class="del-form">
+            <button class="func-button del-friend-button notcancel-button" value="<?php echo $friendIdUsers ?>"
+                name="list">Удалить</button>
+        </div>
     </div>
 </div>
