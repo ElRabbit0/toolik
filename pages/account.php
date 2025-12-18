@@ -2,10 +2,16 @@
 <html lang="ru">
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <script src="../js-scripts/fr-ajax-helper.js" type="module"></script>
+    <script src="../js-scripts/fr-ajax-delete.js" type="module"></script>
+    <script src="../js-scripts/acc-ajax-delet.js" type="module"></script>
+    <script src="../js-scripts/acc-ajax-edit.js" type="module" defer></script>
     <?php
     session_start();
     $_SESSION['page'] = 'Account';
@@ -107,9 +113,7 @@
         </div>
         <div class="friend-div">
             <h1>Ваши друзья</h1>
-            <?php
-            require('./account-render-friend.php');
-            ?>
+
             <div class="more-button">
                 <button class="func-button black-button"
                     onclick="window.location.href='../friends/main.php'">Больше</button>

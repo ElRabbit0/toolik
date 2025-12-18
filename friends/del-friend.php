@@ -39,9 +39,11 @@ if ($hasFriend) {
             }
             break;
         case 'following':
-            $mysql->query("DELETE FROM `f-$username-friends` WHERE `friend_id` = '$id';");
-            $mysql->query("DELETE FROM `f-$friendLog-friends` WHERE `friend_id` = '$userId';");
-            $mysql->close();
+            if ($position == "fol") {
+                $mysql->query("DELETE FROM `f-$username-friends` WHERE `friend_id` = '$id';");
+                $mysql->query("DELETE FROM `f-$friendLog-friends` WHERE `friend_id` = '$userId';");
+                $mysql->close();
+            }
             break;
         case 'friend':
             $mysql->query("UPDATE `f-$username-friends` SET `friend_stat` = 'subscriber' WHERE `friend_id` = '$id';");
@@ -67,6 +69,10 @@ if ($hasFriend) {
     if ($position == "subs") {
         $mysql->query("INSERT INTO `f-$username-friends` (`id`, `friend_id`, `friend_stat`,`add_date`) VALUES (NULL, '$id', 'subscriber','$todayDate');");
         $mysql->query("INSERT INTO `f-$friendLog-friends` (`id`, `friend_id`, `friend_stat`,`add_date`) VALUES (NULL, '$userId', 'following','$todayDate');");
+        $mysql->close();
+    } else if ($position == "fol") {
+        $mysql->query("INSERT INTO `f-$username-friends` (`id`, `friend_id`, `friend_stat`,`add_date`) VALUES (NULL, '$id', 'following','$todayDate');");
+        $mysql->query("INSERT INTO `f-$friendLog-friends` (`id`, `friend_id`, `friend_stat`,`add_date`) VALUES (NULL, '$userId', 'subscriber','$todayDate');");
         $mysql->close();
     }
 }

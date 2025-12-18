@@ -185,3 +185,24 @@
 .exit:hover{
     opacity: 1;
 }
+
+@media(max-width: 768px){
+    #page{
+        min-height: 86vh;
+        margin-top: 5vh;
+    }
+    .friend-node{
+        grid-template-columns: 22% 48% 30%;
+    }
+    .friend-node .func-button{
+        width: 130%;
+    }
+    #func-but-panel{
+        width: 30vw;
+        height: 4vh;
+    }
+    .edit-form .save-button{
+        width: 100%;
+        font-size: 70%;
+    }
+}

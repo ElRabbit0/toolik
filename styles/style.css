@@ -406,6 +406,7 @@
 .account-nickname .nickname-in{
     font-size: 200%;
     font-weight: bold;
+    overflow: hidden;
 }
 .buttons-friend{
     display: flex;
@@ -437,6 +438,29 @@
     width: 100%;
     justify-content: center;
     margin-top: 6px;
+}
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 2px;
+    padding-bottom: -4px;
+    margin-bottom: 4px;
+}
+.edit-form .func-button{
+    margin-top: 4px;
+}
+.edit-form select{
+    filter: brightness(0.9);
+    cursor: pointer;
+    border-radius: 2vw;
+    border: none;
+    padding: 4px 0;
+}
+.edit-form select:hover,
+.edit-form select:focus{
+    filter: brightness(1);
 }
 
 #quit{
@@ -581,16 +605,30 @@
         text-align: center;
     }
     .has{
-        grid-template-columns: 20% calc(60% - 20px) 20%;
+        grid-template-columns: 20% calc(50% - 20px) 30%;
         column-gap: 10px;
+    }
+    .buttons-friend .func-button{
+        width: 120%;
+        text-align: center;
     }
     .info-name h2{
         margin: 0;
     }
     .nickname-in{
-        font-size: 70%;
+        font-size: 50%;
     }
     .date-in span{
         display: block;
+    }
+    .edit-form{
+        width: 120%;
+    }
+    .edit-form .save-button{
+        width: 100%;
+        font-size: 70%;
+    }
+    .edit-form select{
+        padding: 4px 0;
     }
 }

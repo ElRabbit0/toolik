@@ -90,6 +90,8 @@ function hideForm(form){
             }
             else{
                 search_form.style.display = 'block';
+                subscriber_list.style.display = 'none';
+                following_list.style.display = 'none';
             }
             break;
         case "subscriber-list-open":
@@ -98,6 +100,8 @@ function hideForm(form){
             }
             else{
                 subscriber_list.style.display = 'block';
+                search_form.style.display = 'none';
+                following_list.style.display = 'none';
             }
             break;
         case "following-list-open":
@@ -106,6 +110,8 @@ function hideForm(form){
             }
             else{
                 following_list.style.display = 'block';
+                search_form.style.display = 'none';
+                subscriber_list.style.display = 'none';
             }
             break;
         default:

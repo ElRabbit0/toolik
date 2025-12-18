@@ -15,12 +15,10 @@ if (count($friendList) < 3) {
     $additionList = $additionList->fetch_all();
     $friendList = array_merge($friendList, $additionList);
 }
-// echo '<pre>';
-// print_r($friendList);
-// echo '</pre>';
 for ($i = 0; $i < 3; $i++) {
     if (isset($friendList[$i])) {
         $friendDate = $friendList[$i][3];
+        $friendStatValue = $friendList[$i][2];
         $friendDate = new DateTime($friendDate);
         $friendDate = $friendDate->format('d.m.Y');
         $friendId = $friendList[$i][0];

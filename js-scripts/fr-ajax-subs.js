@@ -19,28 +19,19 @@ function sendMsg(){
 
 function Render(data){
     if(data != 'No'){
+        let butSubs;
         subList.innerHTML = data;
-        $('.add-friend-button').on('click', function(event){
-            clicker(event.target.value);
-            if(event.target.classList.contains('notcancel-button')){
-                event.target.classList.replace('notcancel-button', 'cancel-button');
-                event.target.innerText = "Отмена";
-            }
-            else if(event.target.classList.contains('cancel-button')){
-                event.target.classList.replace('cancel-button', 'notcancel-button');
-                event.target.innerText = "Добавить";
-            }
+        butSubs = subList.querySelectorAll('.add-friend-button');
+        butSubs.forEach(button => {
+            button.addEventListener('click', function(event) {
+                clicker(event.target.value, event.target.name);
+            });
         });
-        $('.del-friend-button').on('click', function(event){
-            clickdel(event.target.value, event.target.name);
-            if(event.target.classList.contains('notcancel-button')){
-                event.target.classList.replace('notcancel-button', 'cancel-button');
-                event.target.innerText = "Отмена";
-            }
-            else if(event.target.classList.contains('cancel-button')){
-                event.target.classList.replace('cancel-button', 'notcancel-button');
-                event.target.innerText = "Отклонить";
-            }
+        butSubs = subList.querySelectorAll('.del-friend-button');
+        butSubs.forEach(button => {
+            button.addEventListener('click', function(event) {
+                clickdel(event.target.value, event.target.name);
+            });
         });
     }
     else{

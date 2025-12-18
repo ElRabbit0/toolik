@@ -3,12 +3,12 @@ session_start();
 require('../node/vars.php');
 $username = $_SESSION['login'];
 $mysql = new mysqli($hostnameSQL, $usernameSQL, $passwordSQL, $databaseSQL);
-$subList = $mysql->query("SELECT `friend_id` FROM `f-$username-friends` WHERE `friend_stat` = 'subscriber';");
-$subList = $subList->fetch_all();
-if (count($subList) != 0) {
-    for ($i = 0; $i < count($subList); $i++) {
-        if (isset($subList[$i])) {
-            $id = $subList[$i][0];
+$folList = $mysql->query("SELECT `friend_id` FROM `f-$username-friends` WHERE `friend_stat` = 'following';");
+$folList = $folList->fetch_all();
+if (count($folList) != 0) {
+    for ($i = 0; $i < count($folList); $i++) {
+        if (isset($folList[$i])) {
+            $id = $folList[$i][0];
             $friendIcon = $mysql->query("SELECT `icon` FROM `users` WHERE `id` = '$id';");
             $friendIcon = $friendIcon->fetch_assoc();
             $friendIcon = $friendIcon['icon'];
@@ -30,13 +30,9 @@ if (count($subList) != 0) {
                             </div>
                         </div>
                         <div class='buttons-friend'>
-                            <div class='add-form'>
-                                <button class='func-button add-friend-button notcancel-button'
-                                    value='$id' name='subs'>Добавить</button> 
-                            </div>
                             <div class='del-form'>
                                 <button class='func-button del-friend-button notcancel-button'
-                                    value='$id' name='subs'>Отклонить</button> 
+                                    value='$id' name='fol'>Отписаться</button> 
                             </div>
                         </div>
                     </div>";

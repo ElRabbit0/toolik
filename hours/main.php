@@ -26,7 +26,7 @@
 
 <body>
     <div id="func-but-panel">
-        <button title="Назад" onclick="window.history.back();">↩</button>
+        <button id="back-button" title="Назад" onclick="window.history.back();">↩</button>
         <div id="line-panel"></div><button id="go-main-but" title="На главную"
             onclick="window.location.href='/index.php'">🗲</button>
     </div>

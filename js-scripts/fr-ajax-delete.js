@@ -1,3 +1,4 @@
+import {AgainRender as AgainRender} from "./fr-ajax-helper.js";
 export function clickToDelete(id, pos){
     DeletFriend(id, pos);
 }
@@ -11,6 +12,6 @@ function DeletFriend(idFriend, posForm){
             data: {id: idFriend,position: posForm},
             })
             .done(function(msg){
-                
+                AgainRender(posForm);
             })
 }

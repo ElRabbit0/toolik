@@ -26,10 +26,10 @@
         </div>
     </div>
     <div class="buttons-friend">
-        <form action="/pages/logout.php" method="post" class="add-form">
-            <button class="func-button black-button" type="submit" name="status"
-                value="<?php echo $friendIdUsers ?>">Статус</button> <!-- Поменять -->
-        </form>
+        <div class="add-form">
+            <button class="func-button black-button edit-button" name="list"
+                value="<?php echo $friendIdUsers ?>">Изменить</button>
+        </div>
         <div class="del-form">
             <button class="func-button del-friend-button notcancel-button" value="<?php echo $friendIdUsers ?>"
                 name="list">Удалить</button>

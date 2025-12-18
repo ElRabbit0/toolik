@@ -7,15 +7,16 @@
     <script src="../js-scripts/fr-ajax-search.js" type="module"></script>
     <script src="../js-scripts/fr-ajax-add-friend.js" type="module"></script>
     <script src="../js-scripts/fr-ajax-subs.js" type="module"></script>
+    <script src="../js-scripts/fr-ajax-friend-list.js" type="module"></script>
+    <script src="../js-scripts/fr-ajax-helper.js" type="module"></script>
+    <script src="../js-scripts/fr-ajax-fol.js" type="module"></script>
+    <script src="../js-scripts/fr-ajax-edit.js" type="module"></script>
     <?php
     session_start();
     require('../node/vars.php');
 
     $mysql = new mysqli($hostnameSQL, $usernameSQL, $passwordSQL, $databaseSQL);
     $mysql->close();
-    // friend, bestfriend, partner, subscriber, following
-// систему приглашений и сверстай страницу
-// test
     if ($_SESSION['iSlogin'] != true) {
         header('location: /pages/account-login.php');
     }
@@ -31,7 +32,7 @@
 
 <body>
     <div id="func-but-panel">
-        <button title="Назад" onclick="window.history.back();">↩</button>
+        <button id="back-button" title="Назад" onclick="window.history.back();">↩</button>
         <div id="line-panel"></div><button id="go-main-but" title="На главную"
             onclick="window.location.href='/index.php'">🗲</button>
     </div>
