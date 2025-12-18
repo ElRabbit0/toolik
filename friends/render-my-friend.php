@@ -8,14 +8,10 @@ $friendList = $friendList->fetch_all();
 $additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'bestfriend';");
 $additionList = $additionList->fetch_all();
 $friendList = array_merge($friendList, $additionList);
-$additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` != 'partner' AND `friend_stat` != 'bestfriend';");
+$additionList = $mysql->query("SELECT * FROM `f-$username-friends` WHERE `friend_stat` = 'friend';");
 $additionList = $additionList->fetch_all();
 $friendList = array_merge($friendList, $additionList);
-
-// echo '<pre>';
-// print_r($friendList);
-// echo '</pre>';
-if (count($friendList) > 0) {
+if (count($friendList) != 0) {
     for ($i = 0; $i < count($friendList); $i++) {
         if (isset($friendList[$i])) {
             $friendDate = $friendList[$i][3];
@@ -41,7 +37,6 @@ if (count($friendList) > 0) {
             $friendNickname = $mysql->query("SELECT `nickname` FROM `users` WHERE `id` = '$friendIdUsers';");
             $friendNickname = $friendNickname->fetch_assoc();
             $friendNickname = $friendNickname['nickname'];
-
             require('../node/friend-in-list.php');
         }
     }

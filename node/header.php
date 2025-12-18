@@ -33,20 +33,17 @@
             Toolик
         </div>
         <div id="header-menu">
-            <button class="menu-button" onclick="window.location.href='/hours/main.php'">
-                Часы
+            <button class="menu-button" onclick="window.location.href='../no.php'">
+                Лента
             </button>
-            <button class="menu-button" onclick="window.location.href='../no.html'">
-                Одежда
+            <button class="menu-button" onclick="window.location.href='../no.php'">
+                Чаты
             </button>
-            <button class="menu-button" onclick="window.location.href='../no.html'">
-                Списки
+            <button class="menu-button" onclick="window.location.href='../pages/tools.php'">
+                Инструменты
             </button>
-            <button class="menu-button" onclick="window.location.href='../no.html'">
-                Планировщик
-            </button>
-            <button class="menu-button" onclick="window.location.href='../no.html'">
-                События
+            <button class="menu-button" onclick="window.location.href='../no.php'">
+                Игры
             </button>
         </div>
         <div id="header-account" onclick="window.location.href='/pages/account.php'">

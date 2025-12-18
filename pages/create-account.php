@@ -1,6 +1,8 @@
 <?php
 session_start();
 require('../node/vars.php');
+$_SESSION['login'] = '';
+$_SESSION['nickname'] = '';
 $username = $_POST["username"];
 $_SESSION['error-login'] = '';
 $password = md5($_POST["new-password"]);
@@ -27,8 +29,23 @@ if ($res->num_rows == 0) {
         $id = $id['id'];
         $mysql->query("UPDATE `users` SET `nickname` = 'user-$id' WHERE `login` = '$username';");
         createFriendTable();
+        $_SESSION['message'] = '';
+        $res = $mysql->query("SELECT * FROM `users` WHERE `login` = '$username'");
+        $user = $res->fetch_assoc();
+        $_SESSION['iSlogin'] = true;
+        $_SESSION['login'] = $username;
+        if (isset($user['nickname']) && $user['nickname'] != '') {
+            $_SESSION['nickname'] = $user['nickname'];
+        } else {
+            $_SESSION['nickname'] = '';
+        }
+        if (isset($user['icon']) && $user['icon'] != '') {
+            $_SESSION['icon'] = $user['icon'];
+        } else {
+            $_SESSION['icon'] = '';
+        }
+        $_SESSION['page'] = 'login';
         $mysql->close();
-        $_SESSION['message'] = 'Успешно!';
         header('location: ../index.php');
     } else if (2 > strlen($username) || strlen($username) > 20) {
         errorWrite('Имя пользователя неправильного размера');

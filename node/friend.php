@@ -16,9 +16,12 @@
                 ?>
             </div>
             <div class="status-in">
-                <span>Статус: </span><?php
-                echo $friendStat;
-                ?>
+                <span>Статус: </span>
+                <p style="display: inline">
+                    <?php
+                    echo $friendStat;
+                    ?>
+                </p>
             </div>
             <div class="date-in">
                 <span>Начало дружбы: </span><?php
@@ -27,14 +30,14 @@
             </div>
         </div>
         <div class="buttons-friend">
-            <form action="/pages/logout.php" method="post" class="add-form">
-                <button class="func-button black-button" type="submit" name="status"
-                    value="<?php $friendId ?>">Статус</button> <!-- Поменять -->
-            </form>
-            <form action="/pages/logout.php" method="post" class="del-form">
-                <button class="func-button del-friend-button" type="submit" name="run_script "
-                    value="<?php $friendId ?>">Удалить</button>
-            </form>
+            <div class="add-form">
+                <button class="func-button black-button edit-button" name="<?php echo $friendStatValue; ?>"
+                    value="<?php echo $friendIdUsers ?>">Изменить</button>
+            </div>
+            <div class="del-form">
+                <button class="func-button del-friend-button notcancel-button" name="account"
+                    value="<?php echo $friendIdUsers ?>">Удалить</button>
+            </div>
         </div>
     </div>
 </div>
