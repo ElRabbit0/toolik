@@ -7,6 +7,9 @@ window.addEventListener('resize', (e) => {
     {
         create();
     }
+    else{
+        window.location.reload();
+    }
 });
 
 function create(){

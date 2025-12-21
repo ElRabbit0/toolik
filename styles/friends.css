@@ -126,7 +126,6 @@
     background-color: gainsboro;
     padding: 4px;
     margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 #request-list-container h1{
@@ -171,6 +170,11 @@
 #search-form-real button:hover{
     background-color: white;
 }
+#search-form-real,
+#following-list-div,
+#subscriber-list-div{
+    padding-top: 30px;
+}
 .exit{
     color: black;
     background-color: red;
@@ -181,6 +185,7 @@
     opacity: 0.8;
     transition: opacity 0.2s ease-in-out;
     user-select: none;
+    position: absolute;
 }
 .exit:hover{
     opacity: 1;
@@ -204,5 +209,32 @@
     .edit-form .save-button{
         width: 100%;
         font-size: 70%;
+    }
+    .has .del-form,
+    .has .add-form{
+        display: flex;
+        justify-content: center;
+    }
+    .has{
+        grid-template-columns: 20% calc(45% - 20px) 35%;
+        column-gap: 10px;
+    }
+    #search-form-real input{
+        border-top-left-radius: 2vw;
+        border-bottom-left-radius: 2vw;
+        width: 70%;
+        height: 140%;
+    }
+
+    #search-form-real button{
+        height: max-content;
+    }
+    #search-form-real,
+    #following-list-div,
+    #subscriber-list-div{
+        padding-top: 30px;
+    }
+    .exit{
+        border-radius: 4vw;
     }
 }

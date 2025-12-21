@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="shortcut icon" href="../img/pages-icon.png" />
     <script src="../js-scripts/fr-ajax-helper.js" type="module"></script>
     <script src="../js-scripts/fr-ajax-delete.js" type="module"></script>
     <script src="../js-scripts/acc-ajax-delet.js" type="module"></script>

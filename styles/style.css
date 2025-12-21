@@ -1,7 +1,7 @@
 #page,
 #page-account{
     margin: 0 10vw;
-    margin-top: 6vh;
+    margin-top: 7vh;
     background-color: white;
     padding: 10px 20px;
     padding-bottom: 50px;
@@ -482,10 +482,9 @@
 
 
 @media(max-width: 768px){
-    #page,
-    #page-account{
-        margin-top: 8vh;
-        margin: 0;
+    #page{
+        margin: 0 2vw;
+        margin-top: 10vh;
     }
     .func-button{
         border-radius: 2vw;
@@ -535,8 +534,15 @@
         width: 120px;
     }
     .info-icon img{
+        height: 100px;
+        width: 100px;
+    }
+    .info-icon .user-icon{
         height: 120px;
         width: 120px;
+        object-fit:cover;
+        border-radius: 50%;
+        border:1px solid black;
     }
 
     #edit-pass-button{
@@ -617,6 +623,9 @@
     }
     .nickname-in{
         font-size: 50%;
+    }
+    .status-in span{
+        display: block;
     }
     .date-in span{
         display: block;
