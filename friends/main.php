@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/friends.css">
+    <link rel="shortcut icon" href="../img/pages-icon.png" />
     <title>Friends</title>
 
 </head>

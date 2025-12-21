@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/pages-icon.png" />
     <title><?php if (isset($_SESSION['page'])) {
         echo $_SESSION['page'];
     } else {
